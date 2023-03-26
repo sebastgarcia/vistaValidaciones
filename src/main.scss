@@ -1,0 +1,200 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Then add additional custom code here
+
+//Ajuste sobre componentes Bootstrap
+.form-control{
+    border: var(--bs-border-width) solid var(--bs-secondary-color);
+}
+//Fin Ajuste sobre componentes Bootstrap
+
+body{
+    min-width: 300px;
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/fondo-validaciones.png);
+    background-position: center;
+    background-size: cover;
+
+    >.container{
+        margin-top: 50px;
+    }
+}
+
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: var(--bs-secondary-bg);
+
+    .container{
+        height: 100%;
+
+        .logo {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 250px;
+            }
+        }
+    }
+ 
+} 
+
+.col-xl-3{
+    border-right: 1px solid black;
+} 
+
+.fotoWrapper{
+   
+    display: flex;
+    align-items: center;
+
+    .foto{
+        width: 200px;
+        height: 200px;
+        background-image: url(../img/foto-ejemplo.jpg);
+        background-position: center;
+        background-size: cover  ;
+        
+    }
+}
+
+.estadoValidacion{
+
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    .estadoCarnet{
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--bs-success);
+    }
+
+    .vencimientoCarnet{
+        font-size: 0.875rem;
+        font-weight: 700;
+    } 
+}
+ 
+.datosPersonales{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    overflow: hidden;
+
+    .dni{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+}
+
+.reclamo{
+    margin-top: -70px;
+
+    button{
+        margin-top: 15px;
+    }
+}
+
+.form-label{
+    font-weight: 700;
+}
+
+@media (max-width: 767.98px) { 
+
+    hr{
+        margin: 20px 0!important;
+        opacity: 1;
+    }
+
+    .col-xl-3{
+        border-right: none;
+    } 
+
+    body{
+    
+        >.container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .header{
+        .container{
+            .logo {
+                width: 100%;
+                justify-content: center;
+
+            }
+        }
+    }
+
+    .rowTop{ 
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+
+        .estadoValidacion{
+            align-items: center;
+
+            .estadoCarnet{
+                font-size: 3rem;
+    
+            }
+        }
+
+        .fotoWrapper{
+            justify-content: center;
+
+        }
+    }
+
+    .rowBottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .datosPersonales{
+            align-items: center;
+
+        }
+
+        .reclamo{
+            margin-top: 0px;
+            padding: 0 6%;
+
+            button{
+                margin-left: auto;
+                display: flex;
+            }
+        }
+    }
+
+ }
+
+
+
+@media (max-width: 400px) { 
+    .rowTop {
+        .estadoValidacion{
+            .estadoCarnet{
+                font-size: 2.5rem;
+            }
+        }
+    }  
+}
