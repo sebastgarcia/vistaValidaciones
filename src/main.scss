@@ -19,6 +19,10 @@ body{
     background-image: url(../img/fondo-validaciones.png);
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
 
     >.container{
         margin-top: 50px;
@@ -60,7 +64,8 @@ body{
         height: 200px;
         background-image: url(../img/foto-ejemplo.jpg);
         background-position: center;
-        background-size: cover  ;
+        background-size: cover;
+        border-radius: 10px; 
         
     }
 }
@@ -70,6 +75,10 @@ body{
     height: fit-content;
     display: flex;
     flex-direction: column;
+
+    .tipoCarnet{
+        font-size: 20px;
+    }
 
     .estadoCarnet{
         font-size: 4rem;
@@ -110,6 +119,37 @@ body{
 
 .form-label{
     font-weight: 700;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    margin-bottom: 30px;
+    
+    .row{
+        width: 100%;
+    }
+
+    .col-4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .infoFooter{
+        font-size: 12px;
+        text-align: center;
+     
+    }
+
+    .logo-DGT img{
+        height: 50px;
+    }
+
+    .logo-SIRWIQ img{
+        height: 40px;
+    }
 }
 
 @media (max-width: 767.98px) { 
@@ -187,7 +227,26 @@ body{
 
  }
 
+ @media (max-width: 500px){
+    footer {
+        margin-top: auto;
+        width: 100%;
+        margin-bottom: 30px;
 
+        .infoFooter{
+            font-size: 10px;
+         
+        }
+        
+        .logo-DGT img{
+            height: 30px;
+        }
+    
+        .logo-SIRWIQ img{
+            height: 20px;
+        }
+    }
+ }
 
 @media (max-width: 400px) { 
     .rowTop {

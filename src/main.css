@@ -12001,6 +12001,9 @@ body {
   background-image: url(../img/fondo-validaciones.png);
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 body > .container {
   margin-top: 50px;
@@ -12037,6 +12040,7 @@ body > .container {
   background-image: url(../img/foto-ejemplo.jpg);
   background-position: center;
   background-size: cover;
+  border-radius: 10px;
 }
 
 .estadoValidacion {
@@ -12044,6 +12048,9 @@ body > .container {
   height: fit-content;
   display: flex;
   flex-direction: column;
+}
+.estadoValidacion .tipoCarnet {
+  font-size: 20px;
 }
 .estadoValidacion .estadoCarnet {
   font-size: 4rem;
@@ -12079,6 +12086,31 @@ body > .container {
 
 .form-label {
   font-weight: 700;
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  margin-bottom: 30px;
+}
+footer .row {
+  width: 100%;
+}
+footer .col-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer .infoFooter {
+  font-size: 12px;
+  text-align: center;
+}
+footer .logo-DGT img {
+  height: 50px;
+}
+footer .logo-SIRWIQ img {
+  height: 40px;
 }
 
 @media (max-width: 767.98px) {
@@ -12129,6 +12161,22 @@ body > .container {
   .rowBottom .reclamo button {
     margin-left: auto;
     display: flex;
+  }
+}
+@media (max-width: 500px) {
+  footer {
+    margin-top: auto;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .infoFooter {
+    font-size: 10px;
+  }
+  footer .logo-DGT img {
+    height: 30px;
+  }
+  footer .logo-SIRWIQ img {
+    height: 20px;
   }
 }
 @media (max-width: 400px) {
