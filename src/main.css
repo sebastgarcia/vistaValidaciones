@@ -12028,19 +12028,46 @@ body > .container {
 
 .col-xl-3 {
   border-right: 1px solid black;
+  padding-bottom: 50px;
 }
 
-.fotoWrapper {
+.qrWrapper {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.fotoWrapper .foto {
-  width: 200px;
-  height: 200px;
-  background-image: url(../img/foto-ejemplo.jpg);
+.qrWrapper .qr {
+  width: 150px;
+  height: 150px;
+  background-image: url(../img/QR.JPG);
   background-position: center;
   background-size: cover;
-  border-radius: 10px;
+}
+.qrWrapper .turnoCodigo {
+  font-size: 2rem;
+  color: var(--bs-secondary-color);
+  text-align: center;
+  padding-top: 10px;
+  line-height: 1;
+}
+.qrWrapper .turnoTipo {
+  font-size: 0.875rem;
+  text-align: center;
+}
+.qrWrapper .datosPersonales {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+.qrWrapper .datosPersonales .dni {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .estadoValidacion {
@@ -12052,36 +12079,46 @@ body > .container {
 .estadoValidacion .tipoCarnet {
   font-size: 20px;
 }
-.estadoValidacion .estadoCarnet {
+.estadoValidacion .estadoTurno {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1;
   color: var(--bs-success);
 }
-.estadoValidacion .vencimientoCarnet {
-  font-size: 0.875rem;
-  font-weight: 700;
+.estadoValidacion .bajadaEstadoTurno {
+  font-size: 1.5rem;
+  color: var(--bs-success);
 }
-
-.datosPersonales {
+.estadoValidacion .turnoFecha {
   font-size: 1.5rem;
   font-weight: 700;
+  padding: 5px 0px;
   line-height: 1.25;
-  display: flex;
-  flex-direction: column;
-  padding-top: 10px;
-  overflow: hidden;
 }
-.datosPersonales .dni {
-  font-size: 1rem;
+.estadoValidacion button {
+  width: 110px;
+  margin-top: 20px;
+}
+.estadoValidacion .actualizacionTexto {
+  font-size: 0.875rem;
   font-weight: 400;
+  margin-top: 5px;
 }
 
-.reclamo {
-  margin-top: -70px;
+.rowBottom {
+  justify-content: flex-end;
+  display: flex;
+  margin-top: -60px;
 }
-.reclamo button {
-  margin-top: 15px;
+.rowBottom .acciones {
+  display: flex;
+}
+.rowBottom .acciones .btn {
+  margin-top: 20px;
+}
+.rowBottom .acciones .btn-secondary {
+  color: white;
+  margin-right: 10px;
 }
 
 .form-label {
@@ -12120,13 +12157,14 @@ footer .logo-SIRWIQ img {
   }
   .col-xl-3 {
     border-right: none;
+    padding-bottom: 0;
   }
   body > .container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .header .container .logo {
+  .header .container .qr {
     width: 100%;
     justify-content: center;
   }
@@ -12139,28 +12177,25 @@ footer .logo-SIRWIQ img {
   .rowTop .estadoValidacion {
     align-items: center;
   }
-  .rowTop .estadoValidacion .estadoCarnet {
+  .rowTop .estadoValidacion .turnoFecha {
+    text-align: center;
+  }
+  .rowTop .estadoValidacion .estadoTurno {
     font-size: 3rem;
   }
-  .rowTop .fotoWrapper {
+  .rowTop .qrWrapper {
     justify-content: center;
   }
   .rowBottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 0 20px 0;
     width: 100%;
+    justify-content: center;
   }
-  .rowBottom .datosPersonales {
-    align-items: center;
+  .rowBottom .acciones {
+    justify-content: center;
   }
-  .rowBottom .reclamo {
-    margin-top: 0px;
-    padding: 0 6%;
-  }
-  .rowBottom .reclamo button {
-    margin-left: auto;
-    display: flex;
+  .rowBottom .acciones .btn {
+    margin-top: 0;
   }
 }
 @media (max-width: 500px) {
@@ -12180,7 +12215,20 @@ footer .logo-SIRWIQ img {
   }
 }
 @media (max-width: 400px) {
-  .rowTop .estadoValidacion .estadoCarnet {
+  .rowTop .estadoValidacion .estadoTurno {
     font-size: 2.5rem;
+  }
+  .rowTop .estadoValidacion button {
+    width: 100%;
+  }
+  .rowBottom .acciones {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .rowBottom .acciones .btn {
+    margin-bottom: 15px;
+  }
+  .rowBottom .acciones .btn-secondary {
+    margin-right: 0;
   }
 }/*# sourceMappingURL=main.css.map */

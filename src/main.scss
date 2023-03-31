@@ -52,21 +52,55 @@ body{
 
 .col-xl-3{
     border-right: 1px solid black;
+    padding-bottom: 50px;
 } 
 
-.fotoWrapper{
+.qrWrapper{
    
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
 
-    .foto{
-        width: 200px;
-        height: 200px;
-        background-image: url(../img/foto-ejemplo.jpg);
+    .qr{
+        width: 150px;
+        height: 150px;
+        background-image: url(../img/QR.JPG);
         background-position: center;
         background-size: cover;
-        border-radius: 10px; 
         
+    }
+
+
+    
+    .turnoCodigo{
+        font-size: 2rem;
+        color: var(--bs-secondary-color);
+        text-align: center;
+        padding-top: 10px;
+        line-height: 1;
+    }
+
+    .turnoTipo{
+        font-size: 0.875rem;
+        text-align: center;
+    }
+
+    .datosPersonales{
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.25;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        overflow: hidden;
+        text-align: center;
+    
+        .dni{
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    
     }
 }
 
@@ -75,47 +109,64 @@ body{
     height: fit-content;
     display: flex;
     flex-direction: column;
+    
 
     .tipoCarnet{
         font-size: 20px;
     }
 
-    .estadoCarnet{
+    .estadoTurno{
         font-size: 4rem;
         font-weight: 700;
         line-height: 1;
         color: var(--bs-success);
     }
 
-    .vencimientoCarnet{
-        font-size: 0.875rem;
+    .bajadaEstadoTurno{
+        font-size: 1.5rem;
+        color: var(--bs-success);
+    }
+
+    .turnoFecha{
+        font-size: 1.5rem;
         font-weight: 700;
+        padding: 5px 0px;
+        line-height: 1.25;
+    }
+
+    button{
+        width: 110px; 
+        margin-top: 20px;
+    }
+
+    .actualizacionTexto{
+        font-size: 0.875rem;
+        font-weight: 400;
+        margin-top: 5px;
     } 
 }
  
-.datosPersonales{
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.25;
+
+.rowBottom{
+    justify-content: flex-end; 
     display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    overflow: hidden;
+    margin-top: -60px;
+    
 
-    .dni{
-        font-size: 1rem;
-        font-weight: 400;
-    }
-
-}
-
-.reclamo{
-    margin-top: -70px;
-
-    button{
-        margin-top: 15px;
+    .acciones{
+        display: flex;
+            
+        .btn{
+            margin-top: 20px;
+        }
+    
+        .btn-secondary{
+            color: white;
+            margin-right: 10px;  
+        }
     }
 }
+
 
 .form-label{
     font-weight: 700;
@@ -161,6 +212,7 @@ footer {
 
     .col-xl-3{
         border-right: none;
+        padding-bottom: 0;
     } 
 
     body{
@@ -174,7 +226,7 @@ footer {
 
     .header{
         .container{
-            .logo {
+            .qr {
                 width: 100%;
                 justify-content: center;
 
@@ -191,39 +243,41 @@ footer {
         .estadoValidacion{
             align-items: center;
 
-            .estadoCarnet{
+            .turnoFecha{
+                text-align: center;
+            }
+
+            .estadoTurno{
                 font-size: 3rem;
     
             }
         }
 
-        .fotoWrapper{
+        .qrWrapper{
             justify-content: center;
 
         }
+
+        
     }
 
     .rowBottom{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        margin: 0 0 20px 0;
         width: 100%;
+        justify-content: center;
 
-        .datosPersonales{
-            align-items: center;
-
-        }
-
-        .reclamo{
-            margin-top: 0px;
-            padding: 0 6%;
-
-            button{
-                margin-left: auto;
-                display: flex;
+        .acciones{
+            justify-content: center;
+    
+            .btn{
+                margin-top: 0;
             }
         }
     }
+
+    
+
+    
 
  }
 
@@ -251,9 +305,30 @@ footer {
 @media (max-width: 400px) { 
     .rowTop {
         .estadoValidacion{
-            .estadoCarnet{
+            .estadoTurno{
                 font-size: 2.5rem;
+            }
+
+            button{
+                width: 100%;
             }
         }
     }  
+
+    .rowBottom{
+
+
+        .acciones{
+            justify-content: center;
+            flex-direction: column;
+    
+            .btn{
+                margin-bottom: 15px;
+            }
+
+            .btn-secondary{
+                margin-right: 0;
+            }
+        }
+    }
 }
