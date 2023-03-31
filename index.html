@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Turnos</title>
+        <title>Vista Validaciones</title>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -24,80 +24,59 @@
       <div class="container">
 
         <div class="row rowTop">
-          <div class="col-xl-3 col-md-4 qrWrapper">    
-            <div class="qr" >
-          </div>
+          <div class="col-xl-3 col-md-4 fotoWrapper">    
+            <div class="foto" >
 
-          <div>
-            <div class="turnoCodigo">
-              G001
-            </div>
-
-            <div class="turnoTipo">
-              ENTREGA DE LICENCIA
             </div>
           </div>
-
-          <div class="datosPersonales">
-            <div class="apellido">
-              VALENZUELA
-            </div>
-  
-            <div class="nombre">
-              YANETH
-            </div>               
-  
-            <div class="dni">
-              DNI: 123456789
-            </div>
-  
-          </div>
-        </div>                 
-          
 
 <hr class=" d-md-none">
 
           <div class="col-xl-9 col-md-8  estadoValidacion">
                 
             <div class="tipoCarnet">
-              <i class="fa-regular fa-calendar"></i> <strong>Turno</strong>
+              Carnet <strong>Personal</strong>
             </div>
 
-            <div class="turnoFecha">
-              JUEVES, 16 DE MARZO DE 2023 con el turno # 1
+            <div class="estadoCarnet">
+              HABILITADO
             </div>
 
-            <div class="estadoTurno">
-              RESERVADO
+            <div class="vencimientoCarnet">
+              Vencimiento: 31/12/2021
             </div>
 
-            <div class="bajadaEstadoTurno">
-              Lo estamos esperando
-            </div>
-
-            <button class="btn btn-primary"> 
-              Actualizar 
-            </button>
-
-            <div class="actualizacionTexto">
-              Última consulta a las 17:48:35
-            </div>
-
-          </div>
-        </div>
-        
-
-        
-        <div class="row rowBottom">
-          <hr class=" d-md-none">
-
-          <div class="mb-3 col-xl-9 col-md-8 acciones">
-            <button type="button" class="btn btn-secondary">Descargar Comprobante</button>
-            <button type="button" class="btn btn-danger">Cancelar Turno</button>
           </div>
 
         </div> 
-      </div>
+
+
+        <div class="row rowBottom">
+          <div class="col-xl-3 col-md-4  datosPersonales">
+                
+            <div class="apellido">
+              VALENZUELA
+            </div>
+
+            <div class="nombre">
+              YANETH
+            </div>               
+
+            <div class="dni">
+              DNI: 123456789
+            </div>
+
+          </div>
+    <hr class=" d-md-none">
+          <div class="mb-3 col-xl-9 col-md-8 reclamo">
+            <label for="exampleFormControlTextarea1" class="form-label">Reclamo</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <button type="button" class="btn btn-primary">Enviar</button>
+          </div>
+
+
+        </div>
+
 
       </div>          
       
