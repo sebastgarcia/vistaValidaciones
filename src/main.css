@@ -12011,11 +12011,12 @@ body > .container {
 
 .header {
   width: 100%;
-  height: 100px;
+  height: 120px;
   background-color: var(--bs-secondary-bg);
 }
 .header .container {
   height: 100%;
+  padding: 10px 0;
 }
 .header .container .logo {
   height: 100%;
@@ -12023,7 +12024,7 @@ body > .container {
   align-items: center;
 }
 .header .container .logo img {
-  width: 250px;
+  width: 220px;
 }
 
 .col-xl-3 {
@@ -12091,7 +12092,8 @@ body > .container {
 footer {
   margin-top: auto;
   width: 100%;
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
 }
 footer .row {
   width: 100%;
@@ -12101,6 +12103,7 @@ footer .col-4 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 footer .infoFooter {
   font-size: 12px;
@@ -12162,13 +12165,11 @@ footer .logo-SIRWIQ img {
     margin-left: auto;
     display: flex;
   }
+  footer {
+    padding-left: 10px;
+  }
 }
 @media (max-width: 500px) {
-  footer {
-    margin-top: auto;
-    width: 100%;
-    margin-bottom: 30px;
-  }
   footer .infoFooter {
     font-size: 10px;
   }

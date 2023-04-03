@@ -31,11 +31,12 @@ body{
 
 .header{
     width: 100%;
-    height: 100px;
+    height: 120px;
     background-color: var(--bs-secondary-bg);
 
     .container{
         height: 100%;
+        padding: 10px 0;
 
         .logo {
             height: 100%;
@@ -43,7 +44,7 @@ body{
             align-items: center;
 
             img{
-                width: 250px;
+                width: 220px;
             }
         }
     }
@@ -124,7 +125,9 @@ body{
 footer {
     margin-top: auto;
     width: 100%;
-    margin-bottom: 30px;
+        display: flex;
+    justify-content: center;
+    
     
     .row{
         width: 100%;
@@ -135,6 +138,7 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-bottom: 30px;
     }
 
     .infoFooter{
@@ -225,17 +229,18 @@ footer {
         }
     }
 
+    footer {
+
+        padding-left: 10px;
+    }
+
  }
 
  @media (max-width: 500px){
     footer {
-        margin-top: auto;
-        width: 100%;
-        margin-bottom: 30px;
 
         .infoFooter{
             font-size: 10px;
-         
         }
         
         .logo-DGT img{
